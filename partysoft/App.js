@@ -1,6 +1,8 @@
 import React from 'react';
 import { StyleSheet, View } from 'react-native';
-import AttendeeHomeView from './views/attendee/attendeeHomeView';
+// import { NavigationContainer } from '@react-navigation/native';
+// import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import LoginView from './views/loginView';
 
 const styles = StyleSheet.create({
   container: {
@@ -10,8 +12,8 @@ const styles = StyleSheet.create({
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <AttendeeHomeView/>
+    <View>
+      <LoginView></LoginView>
     </View>
   );
 };
