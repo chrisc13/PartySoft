@@ -1,6 +1,5 @@
 import React from 'react';
 import { StyleSheet, View } from 'react-native';
-import AttendeeHomeView from './views/attendee/attendeeHomeView';
 
 const styles = StyleSheet.create({
   container: {
@@ -11,7 +10,7 @@ const styles = StyleSheet.create({
 export default function App() {
   return (
     <View style={styles.container}>
-      <AttendeeHomeView/>
+      <Text>This is home base</Text>
     </View>
   );
 };
