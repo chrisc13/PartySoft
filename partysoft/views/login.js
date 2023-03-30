@@ -1,11 +1,11 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import masterHeader from '../common/masterHeader';
+import MasterHeader from '../common/masterHeader';
 
-const loginPage = () => {
+const LoginPage = () => {
   return (
     <View style={styles.bg}>
-      <masterHeader></masterHeader>
+      <MasterHeader></MasterHeader>
       <Text style={styles.text}>Login</Text>
     </View>
   );
@@ -22,4 +22,4 @@ const styles = StyleSheet.create({
   }
 });
 
-export default loginPage;
+export default LoginPage;

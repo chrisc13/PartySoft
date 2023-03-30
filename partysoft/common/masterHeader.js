@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
-const masterHeader = () => {
+const MasterHeader = () => {
   return (
     <View style={styles.header}>
       <Text style={styles.text}>PartySoft</Text>
@@ -22,4 +22,4 @@ const styles = StyleSheet.create({
   }
 });
 
-export default masterHeader;
+export default MasterHeader;
