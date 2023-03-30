@@ -10,7 +10,7 @@ const styles = StyleSheet.create({
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>This is home base</Text>
+      <Text>This is home base from windows</Text>
     </View>
   );
 };
