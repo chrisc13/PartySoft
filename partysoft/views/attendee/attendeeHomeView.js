@@ -22,7 +22,7 @@ const attendeeHomeView = () => {
       </View>
     </View>
 
-    <MasterNavigation/>
+    <MasterNavigation data={obj}/>
 
     </View>
   );
