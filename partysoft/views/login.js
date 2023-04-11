@@ -5,8 +5,11 @@ import MasterHeader from '../common/masterHeader';
 const LoginPage = () => {
   return (
     <View style={styles.bg}>
-      <MasterHeader></MasterHeader>
-      <Text style={styles.text}>Login</Text>
+      <MasterHeader></MasterHeader> 
+      <Text>Welcome to the login page</Text>
+      {/* chris' login form goes here*/}
+
+
     </View>
   );
 }
