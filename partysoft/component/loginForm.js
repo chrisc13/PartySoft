@@ -17,26 +17,33 @@ const LoginForm = () => {
     //         Alert("Invalid email")
     //     }
     // }
-    const handleEmailChange = (text) =>{
-        setEmail(text)
-    }
-    const handlePasswordChange = (text) =>{
-        setPassword(text)
-    }
+
+    // const handleEmailChange = (email) => {
+    //     let mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    //     if (email.match(mailformat)){
+    //         //send to login service
+    //         Alert("Login with" +email+" "+password)
+    //     }else{
+    //         Alert("Invalid email")
+    //     }
+    // }
+    // const handleEmailChange = (text) =>{
+    //     setEmail(text)
+    // }
+    // const handlePasswordChange = (text) =>{
+    //     setPassword(text)
+    // }
     return (
         <View style={styles.container}>
-            <View style={styles.emailInput}>
-                <TextInput
-                placeholder="email"
-                onChangeText={handleEmailChange}
-                style={styles.emailDiv}
-                >Email
-                </TextInput>
-            </View>
+            <TextInput
+            placeholder="email"
+            //onChangeText={handleEmailChange}
+            >Email
+            </TextInput>
             <TextInput
                 Password
                 placeholder="password"
-            onChangeText={handlePasswordChange}
+            //onChangeText={handlePasswordChange}
             style={styles.passwordInput}
 
             >Password
@@ -52,38 +59,35 @@ const LoginForm = () => {
 }
 
 const styles = StyleSheet.create({
-
+    container :{
+        backgroundColor: 'grey',
+        //flex: 2,
+        alignContent: 'center',
+        textAlign: 'center',
+        //flexDirection: 'column'
+      },
     emailInput: {
-        flex: 1,
+        //flex: 1,
         fontSize: 20,
-        // backgroundColor: 'red',
+        backgroundColor: 'grey',
         alignItems: 'center',
         borderWidth: 1,
-        justifyContent: 'center'
-    }, 
-    emailDiv: {
-        height: '10%',
-        width: '80%',
-        backgroundColor: 'red',
+        justifyContent: 'center',
+        height: 60,
+        padding: 15, 
         textAlign: 'center'
-    },
+    }, 
     passwordInput: {
         backgroundColor: 'green',
         textAlign: 'center',
-        flex: 1,
-        fontSize: 20
+        //flex: 1,
+        fontSize: 20,
+        height: 60,
+        padding: 15, 
     }, 
     buttonCSS: {
-        flex: 3
-    },
-    container :{
-        backgroundColor: 'grey',
-        flex: 1,
-        alignContent: 'center',
-        textAlign: 'center',
-        flexDirection: 'column'
-  
-      },
+        //flex: 1
+    }
   });
 
 export default LoginForm

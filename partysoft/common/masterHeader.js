@@ -10,15 +10,16 @@ const MasterHeader = () => {
 }
 
 const styles = StyleSheet.create({
-  header: {
-    height: 60,
-    padding: 15,
-    backgroundColor: 'darkslateblue'
-  },
   text: {
-    color: '#fff',
+    color: 'white',
     fontSize: 23,
     textAlign: 'center'
+  },
+  header: {
+    //flex: 1,
+    height: 60,
+    padding: 15, 
+    backgroundColor: 'red'
   }
 });
 

@@ -5,7 +5,7 @@ import LoginForm from '../component/loginForm';
 
 const LoginPage = () => {
   return (
-    <View style={styles.bg}>
+    <View style="styles.loginPage">
       <MasterHeader></MasterHeader>
       <LoginForm></LoginForm>
     </View>
@@ -13,14 +13,8 @@ const LoginPage = () => {
 }
 
 const styles = StyleSheet.create({
-  bg: {
-    backgroundColor: 'darkslateblue',
+  loginPage: {
     flex: 1
-  },
-  text: {
-    color: '#fff',
-    fontSize: 23,
-    textAlign: 'center'
   }
 });
 
