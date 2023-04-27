@@ -4,14 +4,14 @@ import LoginPage from './views/login';
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1
+    flex: 1,
+    backgroundColor: 585858
   }
 });
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>This is home base from windows</Text>
       <LoginPage></LoginPage>
     </View>
   );
