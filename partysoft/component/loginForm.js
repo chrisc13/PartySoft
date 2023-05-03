@@ -3,56 +3,36 @@ import { StyleSheet, Text, View } from 'react-native';
 import React, {useState} from 'react'
 
 
-
 const LoginForm = () => {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
 
-    // const handleSubmit = (email, password) =>{
-    //     let mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-    //     if (email.match(mailformat)){
-    //         //send to login service
-    //         Alert("Login with" +email+" "+password)
-    //     }else{
-    //         Alert("Invalid email")
-    //     }
-    // }
+    const handleSubmit = () =>{
 
-    // const handleEmailChange = (email) => {
-    //     let mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-    //     if (email.match(mailformat)){
-    //         //send to login service
-    //         Alert("Login with" +email+" "+password)
-    //     }else{
-    //         Alert("Invalid email")
-    //     }
-    // }
-    // const handleEmailChange = (text) =>{
-    //     setEmail(text)
-    // }
-    // const handlePasswordChange = (text) =>{
-    //     setPassword(text)
-    // }
+        const mailformat = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+        const passwordFormat = password.length > 6 ;
+
+        if (mailformat.test(email) && passwordFormat){
+            console.log("Valid Inputs")
+        }else{
+            console.log("Invalid Email")
+            Alert.alert("Invalid Email or Password. Please try again")
+        }
+
+        // send it to backend
+
+    }
+    const handleEmailChange = (text) =>{
+        setEmail(text)
+    }
+    const handlePasswordChange = (text) =>{
+        setPassword(text)
+    }
     return (
         <View style={styles.container}>
-            <TextInput
-            placeholder="email"
-            //onChangeText={handleEmailChange}
-            >Email
-            </TextInput>
-            <TextInput
-                Password
-                placeholder="password"
-            //onChangeText={handlePasswordChange}
-            style={styles.passwordInput}
-
-            >Password
-            </TextInput>
-            <Button
-            style={styles.buttonCSS}
-            title="submit test"
-            //onPress={handleSubmit}
-            ></Button>
+            <TextInput placeholder="email" onChangeText={handleEmailChange}>Email</TextInput>
+            <TextInput placeholder="password" onChangeText={handlePasswordChange} style={styles.passwordInput}>Password</TextInput>
+            <Button style={styles.buttonCSS} title="submit test" onPress={handleSubmit}></Button>
         </View>
     )
 
