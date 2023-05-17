@@ -1,11 +1,18 @@
 import { Alert, Button, TextInput } from "react-native"
 import { StyleSheet, Text, View } from 'react-native';
-import React, {useState} from 'react'
+import React, {useState} from 'react';
+import authservice from '../api/authservice';
 
 
 const LoginForm = () => {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
+
+    // const { data, isLoading, error } = authservice("", {
+    //     query: "",
+    //     num_pages: "",
+    //   });
+    const { data, isLoading, error } = authservice();
 
     const handleSubmit = () =>{
 
@@ -20,7 +27,8 @@ const LoginForm = () => {
         }
 
         // send it to backend
-
+        console.log(isLoading)
+        console.log(data)
     }
     const handleEmailChange = (text) =>{
         setEmail(text)
